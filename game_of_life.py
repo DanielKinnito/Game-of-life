@@ -80,6 +80,6 @@ def run_forever(init_state):
         time.sleep(0.6)
 
 if __name__ == "__main__":
-    init_state = load_board_state('./load-files/toad.txt')
+    init_state = load_board_state('./load-files/arrow.txt')
 
     run_forever(init_state)
