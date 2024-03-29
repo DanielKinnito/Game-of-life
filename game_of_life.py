@@ -68,5 +68,5 @@ def run_forever(init_state):
 
 if __name__ == "__main__":
     init_state = random_state(10, 10)
-    # init_state = load_board_state('./toad.txt')
+        
     run_forever(init_state)
