@@ -59,6 +59,19 @@ def next_board_state(initial_board_state):
     
     return return_board
 
+def load_board_state(filename):
+    board_state = []
+    
+    with open(filename, 'r') as file:
+        
+        for line in file:
+            row = line.strip()
+            row = [int(char) for char in row]
+            
+            board_state.append(row)
+    
+    return board_state
+
 def run_forever(init_state):
     next_state = init_state
     while True:
@@ -67,6 +80,6 @@ def run_forever(init_state):
         time.sleep(0.6)
 
 if __name__ == "__main__":
-    init_state = random_state(10, 10)
-        
+    init_state = load_board_state('./load-files/toad.txt')
+
     run_forever(init_state)
