@@ -77,9 +77,9 @@ def run_forever(init_state):
     while True:
         render(next_state)
         next_state = next_board_state(next_state)
-        time.sleep(0.6)
+        time.sleep(0.4)
 
 if __name__ == "__main__":
-    init_state = load_board_state('./load-files/arrow.txt')
+    init_state = load_board_state('./load-files/boxes.txt')
 
     run_forever(init_state)
